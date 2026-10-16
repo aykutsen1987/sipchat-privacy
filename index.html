@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SipChat Gizlilik Politikası</title><style>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SipChat Privacy Policy / Gizlilik Politikası</title><style>
 :root{--bg:#fff;--fg:#1f2430;--mut:#5b6472;--ac:#4f46e5;--card:#f5f6fa;--bd:#e3e6ee}
 @media(prefers-color-scheme:dark){:root{--bg:#12141a;--fg:#e8eaf0;--mut:#9aa3b2;--ac:#8b86ff;--card:#1b1e27;--bd:#2c3140}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -10,8 +10,100 @@ p,li{color:var(--fg)}.mut{color:var(--mut);font-size:.92rem}ul{padding-left:1.2e
 a{color:var(--ac)}.lang{float:right;font-size:.9rem}.box{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px 16px}
 table{width:100%;border-collapse:collapse;font-size:.93rem;margin:.6em 0}th,td{border:1px solid var(--bd);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}
 .tw{overflow-x:auto}
+.sw{position:sticky;top:0;background:var(--bg);padding:10px 0;display:flex;gap:8px;justify-content:flex-end;border-bottom:1px solid var(--bd);z-index:5}
+.sw button{font:inherit;font-size:.9rem;padding:6px 16px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--fg);cursor:pointer}
+.sw button[aria-pressed=true]{background:var(--ac);border-color:var(--ac);color:#fff}
+[hidden]{display:none!important}
 </style></head><body><main>
-<a class="lang" href="privacy-policy-en.html">English</a>
+<div class="sw"><button id="b-en" aria-pressed="true">English</button><button id="b-tr" aria-pressed="false">Türkçe</button></div>
+<section id="en" lang="en">
+<h1>SipChat Privacy Policy</h1>
+<p class="mut">Effective date: October 16, 2026 · Last updated: October 16, 2026</p>
+<p>This Privacy Policy explains how <b>SipChat</b> (package <code>com.sipchat.app</code>, the “App”), developed by <b>@aykutsen1987</b> (“Developer”, “we”, “us”), collects, uses, stores and protects your information. By using the App you agree to this policy.</p>
+<div class="box"><b>Summary:</b> We do not sell your data. One-to-one text messages are end-to-end encrypted. No phone number is required. You can delete your account and data inside the App at any time.</div>
+
+<h2>1. Information We Collect</h2>
+<div class="tw"><table>
+<tr><th>Data</th><th>Why</th></tr>
+<tr><td><b>Account data:</b> username, display name, password (stored only as a salted hash), optional profile photo, language/time-zone preferences</td><td>To create and secure your account and show you to your contacts</td></tr>
+<tr><td><b>Google account e-mail</b> (only if you choose to sign in with or link Google)</td><td>Sign-in, password recovery, optional friend matching</td></tr>
+<tr><td><b>Contact e-mail addresses</b> (only if you enable the optional “find friends by e-mail” feature and grant the Contacts permission)</td><td>Used solely to find mutual matches with other users. Contact e-mails are stored on our server only as keyed one-way hashes (HMAC), not as readable addresses, and are never used for marketing</td></tr>
+<tr><td><b>Messages and media:</b> text, photos, files, voice messages, replies, forwards, reactions, read receipts</td><td>To deliver messages between users</td></tr>
+<tr><td><b>Status updates</b> (24-hour) and their viewer list</td><td>To provide the Status feature</td></tr>
+<tr><td><b>Call data:</b> call history (who, when, duration, missed/answered) and signaling data. Audio/video streams are sent via WebRTC directly between devices; only signaling passes through our server</td><td>To make voice/video calls and show call history</td></tr>
+<tr><td><b>Device and session data:</b> device name, active sessions, authentication tokens, last-seen time</td><td>Security, multi-device sessions, remote sign-out</td></tr>
+<tr><td><b>Encrypted backups</b> (optional)</td><td>To let you restore chats. Backups are encrypted with a key derived from your backup password</td></tr>
+<tr><td><b>Advertising ID and ad-related device data</b> (the App shows banner ads and an interstitial ad about once an hour)</td><td>To show ads through Unity LevelPlay</td></tr>
+<tr><td><b>Reports and blocks</b> you submit</td><td>Safety and abuse prevention</td></tr>
+</table></div>
+<p>We do <b>not</b> collect your precise location, phone number, SMS, call log or browsing history.</p>
+
+<h2>2. App Permissions</h2>
+<ul>
+<li><b>Microphone</b> – voice/video calls and voice messages.</li>
+<li><b>Camera</b> – video calls, photos, and the in-app QR scanner.</li>
+<li><b>Contacts</b> – optional; only to import e-mail addresses for mutual friend matching.</li>
+<li><b>Notifications, foreground service, full-screen intent</b> – message and incoming-call alerts, and the optional “stay connected in background” mode.</li>
+<li><b>Biometrics</b> – optional app lock. Biometric data is handled by Android and never leaves your device or reaches us.</li>
+<li><b>Internet</b> – to communicate with our servers.</li>
+<li><b>Advertising ID</b> – used by the ads SDK.</li>
+</ul>
+
+<h2>3. How We Use Information</h2>
+<ul><li>To provide, operate and secure the App (messaging, calls, statuses, backups);</li>
+<li>To authenticate you, including two-factor authentication;</li>
+<li>To prevent spam, abuse and handle reports;</li>
+<li>To show ads that support the free App;</li>
+<li>To comply with legal obligations.</li></ul>
+<p>We do not sell your personal data and do not use your message content for advertising.</p>
+
+<h2>4. Encryption and Security</h2>
+<ul>
+<li>All traffic with our servers uses HTTPS/TLS.</li>
+<li>One-to-one text messages and Status updates are end-to-end encrypted (Google Tink). <b>Group messages and media files are not end-to-end encrypted</b>; they are protected in transit and stored on our server only as needed for delivery.</li>
+<li>Passwords are stored as hashes (bcrypt). Optional two-factor authentication (TOTP) and a recovery key are available.</li>
+<li>Your session token is kept in encrypted storage on your device.</li>
+</ul>
+<p>No system is 100% secure; please keep your password and recovery key safe.</p>
+
+<h2>5. Third-Party Services</h2>
+<ul>
+<li><b>Google</b> (Sign-In / Credential Manager, only if you choose to use Google sign-in) – <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+<li><b>Unity LevelPlay</b> (ads mediation, uses the advertising ID) – <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a></li>
+<li><b>Render</b> (render.com) – our backend server and PostgreSQL database are hosted on Render, which processes data on our behalf and may keep standard technical server logs (such as IP address and request time). We do not use these logs to profile you. <a href="https://render.com/privacy">render.com/privacy</a></li>
+<li><b>GitHub</b> – hosts only our source code; it does not receive your personal data.</li>
+</ul>
+<p>These providers have their own privacy policies. You can reset or opt out of personalized ads via Android Settings → Privacy → Ads.</p>
+
+<h2>6. Retention and Deletion</h2>
+<ul>
+<li>Account data is kept while your account is active.</li>
+<li>Disappearing messages are removed after the time you set; Status updates expire after 24 hours.</li>
+<li>You can delete messages for everyone, delete chats, delete cloud backups and sign out other sessions in the App.</li>
+<li><b>Delete your account:</b> Settings → Delete account. Deletion is immediate and permanent: your account row and all linked data on our server — profile and photo, e-mail, messages and media you sent, statuses, cloud backup, sessions, contacts, call history, blocks, reports, keys and contact hashes — are erased from our database. We do not keep a copy or an archive. One-to-one chats with you are removed; group chats continue for the remaining members. After deletion you can register again, including with the same e-mail address, as a brand-new account; nothing is restored.</li>
+<li>You may also request deletion by e-mailing us. Accounts that have been inactive for a long time may be deleted automatically.</li>
+<li>Our server is a small hosted service, not a permanent archive, and data may be lost in outages or maintenance. Please keep your own encrypted backup if your chats matter to you.</li>
+</ul>
+
+<h2>7. Your Rights</h2>
+<p>Depending on your location (including under the EU GDPR and Turkey’s KVKK), you may have the right to access, correct, delete, restrict or object to processing of your data, and to data portability. To exercise these rights, use the in-app controls or contact us. You may also complain to your local data-protection authority.</p>
+
+<h2>8. Children</h2>
+<p>The App is not intended for children under 13 (or the minimum age in your country). We do not knowingly collect data from them. If you believe a child has provided data, contact us and we will delete it.</p>
+
+<h2>9. International Transfers</h2>
+<p>Your data may be processed on servers located outside your country. We take reasonable steps to protect it wherever it is processed.</p>
+
+<h2>10. Possible Future Features</h2>
+<p>We may later add Firebase Cloud Messaging push notifications and a TURN relay server for calls. If we do, they would process your push token and call connection data, and we will update this policy before enabling them.</p>
+
+<h2>11. Changes</h2>
+<p>We may update this policy. Material changes will be reflected by the “Last updated” date and, where appropriate, in the App.</p>
+
+<h2>12. Contact</h2>
+<p>Developer: <b>@aykutsen1987</b><br>E-mail: <a href="mailto:aykutsen1987@gmail.com">aykutsen1987@gmail.com</a></p>
+</section>
+<section id="tr" lang="tr" hidden>
 <h1>SipChat Gizlilik Politikası</h1>
 <p class="mut">Yürürlük tarihi: 16 Ekim 2026 · Son güncelleme: 16 Ekim 2026</p>
 <p>Bu Gizlilik Politikası, <b>@aykutsen1987</b> (“Geliştirici”, “biz”) tarafından geliştirilen <b>SipChat</b> uygulamasının (paket adı <code>com.sipchat.app</code>, “Uygulama”) bilgilerinizi nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz.</p>
@@ -97,4 +189,22 @@ table{width:100%;border-collapse:collapse;font-size:.93rem;margin:.6em 0}th,td{b
 
 <h2>12. İletişim</h2>
 <p>Geliştirici: <b>@aykutsen1987</b><br>E-posta: <a href="mailto:aykutsen1987@gmail.com">aykutsen1987@gmail.com</a></p>
-</main></body></html>
+</section>
+</main>
+<script>
+(function(){
+  var L={en:document.getElementById('en'),tr:document.getElementById('tr')};
+  function set(l,save){
+    for(var k in L){L[k].hidden=(k!==l);document.getElementById('b-'+k).setAttribute('aria-pressed',k===l)}
+    document.documentElement.lang=l;
+    document.title=l==='tr'?'SipChat Gizlilik Politikası':'SipChat Privacy Policy';
+    if(save){try{history.replaceState(null,'','#'+l)}catch(e){}}
+    window.scrollTo(0,0);
+  }
+  document.getElementById('b-en').onclick=function(){set('en',true)};
+  document.getElementById('b-tr').onclick=function(){set('tr',true)};
+  var h=location.hash.replace('#','');
+  set(h==='tr'||h==='en'?h:((navigator.language||'en').toLowerCase().indexOf('tr')===0?'tr':'en'),false);
+})();
+</script>
+</body></html>
